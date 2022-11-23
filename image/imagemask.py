@@ -6,7 +6,7 @@ import gradio as gr
 
 def sepia(args):
   image = args["image"]
-  mask = args["mask"][:, :, :1] 
+  mask = args["mask"][:, :, :1]
   mask = (mask / 255).astype('int')
   rs = image * mask
   return rs
